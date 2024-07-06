@@ -19,3 +19,10 @@ body {
 main {
     display: flex;
 }
+
+.card-bg {
+    background-image: url('assets/backgrounds/card-bg.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}

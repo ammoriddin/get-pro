@@ -8,7 +8,10 @@ export default {
       colors: {
         primaryGray: '#f7f7f7',
         primaryBorder: "#f2f2f2",
-      }
+        primaryBlue: "#0072CE",
+        secondaryColor: "#777777",
+        yellow: "#FFB800",
+      },
     },
   },
   plugins: [],
