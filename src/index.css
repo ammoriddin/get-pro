@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    color: black;
+    background-color: #f7f7f7;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
