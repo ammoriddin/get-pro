@@ -5,8 +5,10 @@ import chatIcon from '@assets/icons/chat.svg'
 import videoCallIcon from '@assets/icons/video-call.svg'
 import lampIcon from '@assets/icons/lamp.svg'
 import Card from '@components/card'
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+  const navigate = useNavigate()
   const sectionsData = [
     {
       title: "New Project",
@@ -56,7 +58,7 @@ export default function Home() {
           {
             sectionsData.map((section, index) => (
               <div className='w-[100px] flex flex-col gap-[10px] items-center' key={index}>
-                <div className={`w-[100px] cursor-pointer relative h-[100px] ${section.background ? `bg-${section.background}` : "bg-white"} rounded-[50%] flex justify-center items-center`}>
+                <div onClick={() => navigate(section.link)} className={`w-[100px] cursor-pointer relative h-[100px] ${section.background ? `bg-${section.background}` : "bg-white"} rounded-[50%] flex justify-center items-center`}>
                   {section.notification && <span className='absolute w-[6px] h-[6px] rounded-[50%] bg-yellow top-[30px] right-[33px]'></span>}
                   <img src={section.icon} alt={section.title} />
                 </div>
