@@ -18,7 +18,7 @@ export default function Home() {
     {
       title: "Tasks",
       icon: taskIcon,
-      link: '/tasks',
+      link: '/tasks/project/1',
     },
     {
       title: "Chat",

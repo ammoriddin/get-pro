@@ -7,10 +7,14 @@ export default {
     extend: {
       colors: {
         primaryGray: '#f7f7f7',
+        secondaryGray: '#adadad',
         primaryBorder: "#f2f2f2",
         primaryBlue: "#0072CE",
         secondaryColor: "#777777",
         yellow: "#FFB800",
+        secondaryBlack: '#323232',
+        darkYellow: '#FDC500',
+        primaryGreen: '#75cd67',
       },
     },
   },

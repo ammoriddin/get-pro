@@ -26,3 +26,10 @@ main {
     background-position: 0 0;
     background-size: cover;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('./assets/icons/date-picker.svg') no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+}
