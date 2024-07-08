@@ -166,7 +166,12 @@ export default function Right() {
             <section className='bg-white relative h-[87vh] rounded-[7px] pt-[2px] pb-[20px] w-[700px] 2xl:w-[70%]'>
 
                 {
-                    value === "default" || value === "Tasks"  &&
+                    value === "default"  &&
+                    <Task tasks={tasks} />
+                }
+
+                {
+                    value === "Tasks"  &&
                     <Task tasks={tasks} />
                 }
 
