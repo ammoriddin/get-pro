@@ -79,7 +79,7 @@ export default function Chat() {
     return (
         <div className='h-full overflow-auto pb-[90px]'>
             {/* Task Name */}
-            <div className='flex gap-[10px] sticky top-0 bg-white z-30 items-center px-[2px] mb-[40px]'>
+            <div className='flex gap-[10px] sticky top-0 bg-white z-30 items-center px-[2px] mb-[30px]'>
                 <Badge text="Oasis International Travel" />
                 <span className='font-[500] text-[0.75rem] 2xl:text-[0.95rem]'>14 kun</span>
             </div>
