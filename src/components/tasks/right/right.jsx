@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import taskIcon from '@assets/png-icons/task.png'
 import chatIcon from '@assets/png-icons/chat.png'
 import lampIcon from '@assets/png-icons/lamp.png'
 import Tab from '@components/tab'
 import ChustomCheckbox from '@components/custom-checkbox/index'
-import Badge from '@components/badge'
-import { useDateColor } from '@hooks/useDateColor'
 import replay from '@assets/icons/replay.svg'
+import { useTab } from '@hooks/useTab/useTab'
+import Task from '../tabs/task-tab'
+import Chat from '../tabs/chat-tab'
 
 export default function Right() {
     const [isChecked, setIsChecked] = useState(false)
@@ -139,12 +140,14 @@ export default function Right() {
         }
     ]
 
+    const [value, setValue] = useTab()
+
     return (
-        <div>
+        <div className='w-[700px] 2xl:w-[70%]'>
             {/* Header */}
             <div className='flex items-center justify-between mb-5 w-[700px] 2xl:w-[70%]'>
                 {/* Tabfilter */}
-                <Tab data={tabs} />
+                <Tab onChange={setValue} data={tabs} />
 
                 <div className='flex items-center gap-[20px]'>
                     <ChustomCheckbox bg={"bg-primaryGreen"} isChecked={isChecked} setIsChecked={setIsChecked} />
@@ -162,42 +165,15 @@ export default function Right() {
 
             <section className='bg-white relative h-[87vh] rounded-[7px] pt-[2px] pb-[20px] w-[700px] 2xl:w-[70%]'>
 
-                <div className='h-full overflow-auto'>
-                    {/* Task Name */}
-                    <div className='flex gap-[10px] sticky top-0 bg-white z-30 items-center px-[2px] mb-[40px]'>
-                        <Badge text="Oasis International Travel" />
-                        <span className='font-[500] text-[0.75rem] 2xl:text-[0.95rem]'>14 kun</span>
-                    </div>
+                {
+                    value === "default" || value === "Tasks"  &&
+                    <Task tasks={tasks} />
+                }
 
-                    {/* Main Task */}
-                    <div className='px-[40px]'>
-                        {
-                            tasks.map((task, index) => {
-                                return (
-                                    <div key={index}>
-                                        <h2 className={`${useDateColor(task.date)} text-[0.813rem] 2xl:text-[0.9rem] font-[500] leading-[20px] mb-[10px]`}>{task.date}</h2>
-
-                                        {/* Tasks Wrapper */}
-                                        <div className='flex flex-col gap-[20px] mb-10'>
-                                            {
-                                                task.tasks.map((task) => {
-                                                    const [isChecked, setIsChecked] = useState(task.isDone)
-                                                    return (
-                                                        <div key={task.id} className='flex items-start gap-[10px]'>
-                                                            <ChustomCheckbox bg={"bg-primaryGreen"} isChecked={isChecked} setIsChecked={setIsChecked} />
-                                                            <p className={`${isChecked   ? "line-through text-secondaryGray" : ""} text-[0.875rem] 2xl:text-[0.95rem] font-[400]`}>{task.title}</p>
-                                                        </div>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-
+                {
+                    value == "Chat" &&
+                    <Chat />
+                }
 
                 {/* Add Task Section */}
                 <div className='w-full bg-white z-30 px-[20px] absolute bottom-[20px] flex items-stretch gap-[10px]'>
