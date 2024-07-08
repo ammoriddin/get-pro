@@ -108,8 +108,8 @@ export default function Chat() {
                                         <div className='bg-[transparent] transition-[background-color] hover:bg-primaryGray p-[9px] w-full rounded-[8px] flex justify-between'>
                                             {/* Message Data */}
                                             <div className='flex flex-col gap-[5px]'>
-                                                <h3 className='font-medium text-[0.875rem] leading-[auto] text-secondaryBlack'>{userMessage.user_name}</h3>
-                                                <p className='font-[400] text-[0.875rem] leading-[19px] text-secondayrDarkBlack'>{userMessage.text}</p>
+                                                <h3 className='font-[600] text-[0.975rem] leading-[auto] text-secondaryBlack'>{userMessage.user_name}</h3>
+                                                <p className='font-[500] text-[0.875rem] leading-[19px] text-secondayrDarkBlack'>{userMessage.text}</p>
                                                 <span className='font-[400] text-[0.75rem] 2xl:text-[0.95rem] text-secondaryColor'>{userMessage.time}</span>
                                             </div>
 
