@@ -2,6 +2,7 @@ import Badge from '@components/badge'
 import React from 'react'
 import replayIcon from '@assets/icons/replay.svg'
 import dots from '@assets/png-icons/three-dots.png'
+import dateIcon from '@assets/icons/date-icon.svg'
 
 export default function Chat() {
     const messages = [
@@ -90,8 +91,9 @@ export default function Chat() {
                         <div key={index} className='flex flex-col gap-[20px]'>
 
                             {/* Date */}
-                            <p className='w-full mt-[10px] mb-[10px] py-[5px] px-[5.65px] bg-primaryGray rounded-[3px] text-[0.75rem] 2xl:text-[0.95rem] text-secondaryGrayText font-medium leading-[auto]'>
-                                {message.date}
+                            <p className='w-full flex items-center gap-[4.5px] mt-[10px] mb-[10px] py-[5px] px-[5.65px] bg-primaryGray rounded-[3px] text-[0.75rem] 2xl:text-[0.95rem] text-secondaryGrayText font-medium leading-[auto]'>
+                                <img src={dateIcon} alt="" />
+                                <span>{message.date}</span>
                             </p>
                             {
                                 message.data.map((userMessage, index) => (
