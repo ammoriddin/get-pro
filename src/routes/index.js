@@ -1,5 +1,5 @@
 import Home from "@pages/home"
-import Tasks from "@pages/taks"
+import Tasks from "@pages/project"
 
 export const routes = [
     {
