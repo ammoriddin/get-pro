@@ -1,6 +1,6 @@
 import React from 'react'
-import Left from '@components/tasks/left/left'
-import Right from '@components/tasks/right/right'
+import Left from '@components/project/left/left'
+import Right from '@components/project/right/right'
 
 export default function Tasks() {
   return (

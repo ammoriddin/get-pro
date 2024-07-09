@@ -4,12 +4,12 @@ import chatIcon from '@assets/png-icons/chat.png'
 import lampIcon from '@assets/png-icons/lamp.png'
 import Tab from '@components/tab'
 import ChustomCheckbox from '@components/custom-checkbox/index'
-import replay from '@assets/icons/replay.svg'
 import { useTab } from '@hooks/useTab/useTab'
 import Task from '../tabs/task-tab'
 import Chat from '../tabs/chat-tab'
-import { DatePicker } from 'rsuite'
 import "rsuite/dist/rsuite.css";
+import TaskInput from '../tabs/task-tab/task-input'
+import ChatInput from '../tabs/chat-tab/chat-input'
 
 export default function Right() {
     const [isChecked, setIsChecked] = useState(false)
@@ -183,18 +183,20 @@ export default function Right() {
                 }
 
                 {/* Add Task Section */}
-                <div className='w-full bg-white z-30 px-[20px] absolute bottom-[20px] flex items-stretch gap-[10px]'>
-                    <div className='w-[75%] relative'>
-                        <input type="text" placeholder='New Task' className='w-full h-full py-[12px] px-[20px] bg-primaryGray rounded-[7px] placeholder:text-black' />
-                        <div className='w-[10px] cursor-pointer absolute right-[24px] top-[50%] translate-y-[-50%]'>
-                            <img className='w-full' src={replay} alt="replay" />
-                        </div>
-                    </div>
+                {
+                    value === "default" &&
+                    <TaskInput />
+                }
 
-                    <div className="relative w-[30%]">
-                        <DatePicker className='h-full custom-datepicker' />
-                    </div>
-                </div>
+                {
+                    value === "Tasks" &&
+                    <TaskInput />
+                }
+
+                {
+                    value === "Chat" &&
+                    <ChatInput />
+                }
             </section>
         </div>
     )
