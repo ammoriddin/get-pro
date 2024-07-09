@@ -116,7 +116,7 @@ export default function Chat() {
                                             {/* Message Edit section */}
                                             <div className='flex items-start'>
                                                 <div className='flex items-stretch gap-[2px]'>
-                                                    <button className='flex items-center rounded-xl py-[4.5px] px-[7px] gap-[5.67px] bg-white'>
+                                                    <button className='flex items-center rounded-[9px] py-[4.5px] px-[7px] gap-[5.67px] bg-white'>
                                                         <img className='w-[10px]' src={replayIcon} alt="Replay Icon" />
                                                         <span className='text-[0.75rem] 2xl:text-[0.8rem] font-[400] leading-[auto]'>Replay</span>
                                                     </button>

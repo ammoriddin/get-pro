@@ -10,18 +10,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/material": "^5.16.0",
     "date-fns": "^3.6.0",
     "font-awesome": "^4.7.0",
     "react": "^18.3.1",
     "react-beautiful-dnd": "^13.1.1",
+    "react-datepicker": "^7.3.0",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.1",
     "react-toastify": "^10.0.5",
+    "rsuite": "^5.65.1",
     "tsconfig-paths": "^4.2.0",
     "vite-tsconfig-paths": "^4.3.2"
   },

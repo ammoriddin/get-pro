@@ -8,6 +8,8 @@ import replay from '@assets/icons/replay.svg'
 import { useTab } from '@hooks/useTab/useTab'
 import Task from '../tabs/task-tab'
 import Chat from '../tabs/chat-tab'
+import { DatePicker } from 'rsuite'
+import "rsuite/dist/rsuite.css";
 
 export default function Right() {
     const [isChecked, setIsChecked] = useState(false)
@@ -163,7 +165,7 @@ export default function Right() {
 
             {/* Main Content */}
 
-            <section className='bg-white relative h-[87vh] rounded-[7px] pt-[2px] pb-[20px] w-[700px] 2xl:w-[70%]'>
+            <section className='bg-white relative h-[87vh] rounded-[7px] pt-[2px] pb-[30px] w-[700px] 2xl:w-[70%]'>
 
                 {
                     value === "default"  &&
@@ -183,16 +185,15 @@ export default function Right() {
                 {/* Add Task Section */}
                 <div className='w-full bg-white z-30 px-[20px] absolute bottom-[20px] flex items-stretch gap-[10px]'>
                     <div className='w-[75%] relative'>
-                        <input type="text" placeholder='New Task' className='w-full h-full p-5 bg-primaryGray rounded-[7px] placeholder:text-black' />
+                        <input type="text" placeholder='New Task' className='w-full h-full py-[12px] px-[20px] bg-primaryGray rounded-[7px] placeholder:text-black' />
                         <div className='w-[10px] cursor-pointer absolute right-[24px] top-[50%] translate-y-[-50%]'>
                             <img className='w-full' src={replay} alt="replay" />
                         </div>
                     </div>
 
                     <div className="relative w-[30%]">
-                        <input id="datepicker-actions" datepicker datepickerButtons datepickerAutoselectToday type="date" className="bg-white outline-none border h-full border-primaryBorder text-sm rounded-lg block w-full px-[18px] placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500" placeholder="Select date" />
+                        <DatePicker className='h-full custom-datepicker' />
                     </div>
-
                 </div>
             </section>
         </div>

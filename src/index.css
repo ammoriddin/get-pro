@@ -33,3 +33,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 16px;
     height: 16px;
 }
+
+.rs-picker-input-group {
+    height: 100%;
+}
+
+.rs-anim-fade {
+    top: 60% !important;
+    left: 70rem !important;
+}
+
+@media screen and (min-width: 1770px) {
+    .rs-anim-fade {
+      left: 70% !important;
+    }
+  }
