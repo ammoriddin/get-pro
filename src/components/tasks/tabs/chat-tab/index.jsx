@@ -100,8 +100,8 @@ export default function Chat() {
                                     // Message
                                     <div className='flex cursor-pointer' key={index}>
                                         {/* Profile Photo */}
-                                        <div className='w-[40px] mr-[6px] h-[40px] 2xl:w-[50px] 2xl:h-[50px] border-[4px] border-lightBlue border-solid rounded-[50%]'>
-                                            <img className='w-full rounded-[50%] border-[1px] object-cover border-[#4B4A92] border-solid' src={userMessage.avatar} alt="user avatar" />
+                                        <div className='w-[40px]] mr-[6px] h-[40px] 2xl:w-[50px] 2xl:h-[48px] border-[4px] border-lightBlue border-solid rounded-[50%]'>
+                                            <img className='w-full h-full rounded-[50%] border-[1px] object-cover border-[#4B4A92] border-solid' src={userMessage.avatar} alt="user avatar" />
                                         </div>
 
                                         {/* Message */}
