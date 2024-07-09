@@ -5,6 +5,10 @@ import burgerMenu from '@assets/icons/burger.svg'
 export default function Projects({projectName, projectId, isActive}) {
     const navigate = useNavigate()
 
+    const truncateProjectName = (name) => {
+        return name.length > 18 ? name.substring(0, 10) + '...' : name;
+    };
+
     return (
         <div onClick={() => navigate(`/tasks/project/${projectId}`)} className={`w-full pl-[10px] gap-[10px] pr-[30px] flex cursor-pointer rounded-md ${isActive ? "bg-primaryGray" : "bg-white"} pb-[4px] py-[10px]`}>
             {/* Project Settins Controller */}
@@ -14,7 +18,7 @@ export default function Projects({projectName, projectId, isActive}) {
 
             {/* Project Name */}
             <div>
-                <p className='font-medium text-[0.75rem] 2xl:text-[0.95rem] leading-none'>{projectName}</p>
+                <p className='font-medium text-[0.75rem] 2xl:text-[0.95rem] leading-none'> {truncateProjectName(projectName)}</p>
                 <span className='text-[0.70rem] uppercase text-secondaryColor'>13 kun</span>
             </div>
         </div>
